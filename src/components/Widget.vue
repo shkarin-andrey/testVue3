@@ -48,6 +48,8 @@
 </template>
 
 <script setup>
+import { formatTime } from '../utils/formatTime';
+
 const emit = defineEmits();
 const props = defineProps({
   item: Object,
@@ -62,16 +64,7 @@ const resetTimer = (currentId) => {
   emit("resetTimer", currentId );
 };
 
-const formatTime = (time) => {
-  const hours = Math.floor(time / 60 / 60);
-  const formatHours = hours < 10 ? `0${hours}` : `${hours}` ;
-  const minutes = Math.floor(time / 60);
-  const formatMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
-  const seconds = Math.floor(time % 60);
-  const formatSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
 
-  return `${formatHours}:${formatMinutes}:${formatSeconds}`;
-};
 </script>
 
 <style scoped>

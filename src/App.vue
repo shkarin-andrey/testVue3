@@ -21,7 +21,7 @@ const initialState = [
   { id: uuidv4(), time: 20, isPlay: false, timer: null },
   { id: uuidv4(), time: 1000, isPlay: false, timer: null },
   { id: uuidv4(), time: 2000, isPlay: false, timer: null },
-  { id: uuidv4(), time: 3000, isPlay: false, timer: null },
+  { id: uuidv4(), time: 4000, isPlay: false, timer: null },
 ];
 const widget = ref(initialState);
 
